@@ -35,6 +35,7 @@ def read_file(path):
         raise FileError(f"Файл не знайдено: {path}")
     if text.strip() == "":
         raise FileError(f"Файл {path} порожній")
+    return text
 
 def write_pdf(text, path):
     pdfmetrics.registerFont(TTFont("TimesNewRoman", font_path))
